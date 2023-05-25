@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin: 'https://www.nayeemriddhi.info/cookieapp',
+    origin: 'https://www.nayeemriddhi.info',
     credentials: true
 }));
 
