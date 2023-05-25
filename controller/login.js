@@ -9,8 +9,9 @@ router.post('/login', async(req, res) => {
     if(!findUser) { return res.status(404).json({msg: "Username Doesn't exist"}) }
      else { 
         
-        res.cookie('CookieTest', 'cookie_value', {
+        res.cookie('cookietest', 'cookie_value', {
             maxAge: 30 * 24 * 60 * 60 * 1000,
+            path: "/",
             httpOnly: true,
             sameSite: "none",
             secure:true
