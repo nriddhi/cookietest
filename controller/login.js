@@ -11,10 +11,11 @@ router.post('/login', async(req, res) => {
         
         res.cookie('cookietest', 'cookie_value', {
             maxAge: 30 * 24 * 60 * 60 * 1000,
-            path: "/",
+            path: "/cookieapp",
             httpOnly: true,
             sameSite: "none",
-            secure:true
+            secure:true,
+            domain: 'nayeemriddhi.info/cookieapp'
       });
         return res.status(200).json({msg:"Logged in successfully"});
     
